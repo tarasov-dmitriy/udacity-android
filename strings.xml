@@ -6,4 +6,6 @@
     <string name="qwt">quantity</string>
     <string name="qwt_num">0</string>
     <string name="order">Order</string>
+    <string name="price">$0</string>
+    <string name="str_price">price</string>
 </resources>
