@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Juma Mubarak!</string>
+    <string name="to">Ya Lilia, Juma Mubarak!</string>
+    <string name="from">From Dima</string>
+    <string name="desc">happy image</string>
+    <string name="qwt">quantity</string>
+    <string name="qwt_num">0</string>
+    <string name="order">Order</string>
+</resources>
