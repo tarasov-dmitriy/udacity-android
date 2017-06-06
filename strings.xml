@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Juma Mubarak!</string>
+    <string name="app_name">Just Java</string>
     <string name="to">Juma Mubarak!</string>
     <string name="from">From sender</string>
     <string name="desc">happy image</string>
@@ -7,5 +7,7 @@
     <string name="qwt_num">0</string>
     <string name="order">Order</string>
     <string name="price">$0</string>
-    <string name="str_price">price</string>
+    <string name="str_price">order summary</string>
+    <string name="toppings">toppings</string>
+    <string name="whipedCream">Whipped cream</string>
 </resources>

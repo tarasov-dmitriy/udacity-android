@@ -1,49 +1,49 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- 0. use empty activity template
+     0.1. package name is unique app ID
+     1. draw the UI & select the views (TextView = 4 ; Button = 3)
+     2. position the views (parent, siblings, branches; IDs)
+     3. style the views
+     4. code -> reformat code
+     5. code -> rearrange code -->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <!-- 0. use empty activity template
-         0.1. package name is unique app ID
-         1. select the views (TextView = 4 ; Button = 3)
-         2. position the views
-         3. style the views
-         4. code -> reformat code
-         5. code -> rearrange code -->
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:contentDescription="@string/desc"
-        android:scaleType="centerCrop"
-        android:src="@drawable/juma" />
-
-
-    <TextView
-        android:id="@+id/to"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:fontFamily="sans-serif"
-        android:padding="20dp"
-        android:text="@string/to"
-        android:textColor="@android:color/white"
-        android:textSize="30sp" />
+    android:layout_height="match_parent"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/to"
         android:background="@android:color/white"
         android:orientation="vertical">
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/toppings"
+            android:textAllCaps="true"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="16sp" />
+
+        <CheckBox
+            android:id="@+id/whipped_cream"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="24dp"
+            android:paddingRight="0dp"
+            android:paddingStart="24dp"
+            android:text="@string/whipedCream"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
             android:text="@string/qwt"
             android:textAllCaps="true"
             android:textColor="@android:color/darker_gray"
@@ -88,7 +88,7 @@
             android:textColor="@android:color/darker_gray" />
 
         <TextView
-            android:id="@+id/price_text_view"
+            android:id="@+id/order_summary_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
@@ -104,19 +104,7 @@
             android:textColor="@android:color/black"
             android:textSize="16sp" />
 
+
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/from"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:fontFamily="sans-serif"
-        android:padding="20dp"
-        android:text="@string/from"
-        android:textColor="@android:color/white"
-        android:textSize="30sp" />
-
-</RelativeLayout>
+</ScrollView>
