@@ -18,6 +18,12 @@
         android:background="@android:color/white"
         android:orientation="vertical">
 
+        <EditText
+            android:id="@+id/edit_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/name" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -37,6 +43,16 @@
             android:paddingRight="0dp"
             android:paddingStart="24dp"
             android:text="@string/whipedCream"
+            android:textSize="16sp" />
+
+        <CheckBox
+            android:id="@+id/chocolate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="24dp"
+            android:paddingRight="0dp"
+            android:paddingStart="24dp"
+            android:text="@string/chocolate"
             android:textSize="16sp" />
 
         <TextView

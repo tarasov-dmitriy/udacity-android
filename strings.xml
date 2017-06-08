@@ -10,4 +10,6 @@
     <string name="str_price">order summary</string>
     <string name="toppings">toppings</string>
     <string name="whipedCream">Whipped cream</string>
+    <string name="chocolate">Chocolate</string>
+    <string name="name">Name</string>
 </resources>
