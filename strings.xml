@@ -1,15 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Just Java</string>
-    <string name="to">Juma Mubarak!</string>
-    <string name="from">From sender</string>
-    <string name="desc">happy image</string>
-    <string name="qwt">quantity</string>
-    <string name="qwt_num">0</string>
-    <string name="order">Order</string>
-    <string name="price">$0</string>
-    <string name="str_price">order summary</string>
-    <string name="toppings">toppings</string>
-    <string name="whipedCream">Whipped cream</string>
-    <string name="chocolate">Chocolate</string>
-    <string name="name">Name</string>
+    <string name="app_name">Просто Джава</string>
+    <string name="addChocolate">Добавить шоколад?</string>
+    <string name="addWhipped">Добавить взбитый крем?</string>
+    <string name="chocolate">Шоколад</string>
+    <string name="decrementLimit">Количество не может быть меньше 1</string>
+    <string name="eMailSubject">Заказ ПростоДжавы для:</string>
+    <string name="desc"></string>
+    <string name="from">От</string>
+    <string name="incrementLimit">Количество не может быть больше 100</string>
+    <string name="name">Имя</string>
+    <string name="order">Заказ</string>
+    <string name="qwt">Количество</string>
+    <string name="receiptAmount">Итого: $</string>
+    <string name="str_price">сумма заказа</string>
+    <string name="thank">Спасибо!</string>
+    <string name="to"></string>
+    <string name="toppings">Начинки</string>
+    <string name="whipedCream">Взбитый крем</string>
 </resources>

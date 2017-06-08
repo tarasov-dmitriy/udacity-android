@@ -2,6 +2,8 @@ package com.example.android.justjava;
 
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -45,7 +47,15 @@ public class MainActivity extends AppCompatActivity {
         //String priceMessage = "Total: $" + price;
         //priceMessage = priceMessage + "\nThank You!";
         String priceMessage = createOrderSummary(price, hasWhippedCream, hasChocolate, name);
-        displayMessage(priceMessage);
+//        displayMessage(priceMessage);
+        Intent eMail = new Intent(Intent.ACTION_SENDTO);
+        eMail.setData(Uri.parse("mailto:")); // only email apps should handle this
+        String subject = getString(R.string.eMailSubject) + " " + name;
+        eMail.putExtra(Intent.EXTRA_SUBJECT, subject);
+        eMail.putExtra(Intent.EXTRA_TEXT, priceMessage);
+        if (eMail.resolveActivity(getPackageManager()) != null) {
+            startActivity(eMail);
+        }
     }
 
     /**
@@ -55,12 +65,12 @@ public class MainActivity extends AppCompatActivity {
      */
 
     public String createOrderSummary(int price, boolean hasWhippedCream, boolean hasChocolate, String name) {
-        String priceMessage = "Name: " + name;
-        priceMessage += "\nAdd whipped cream? " + hasWhippedCream;
-        priceMessage += "\nAdd chocolate? " + hasChocolate;
-        priceMessage += "\nQuantity: " + quantity;
-        priceMessage += "\nTotal: $" + price;
-        priceMessage += "\nThank you!";
+        String priceMessage = getString(R.string.order_summary_name) + ": " + name;
+        priceMessage += "\n" + getString(R.string.addWhipped) + " " + hasWhippedCream;
+        priceMessage += "\n" + getString(R.string.addChocolate) + " " + hasChocolate;
+        priceMessage += "\n" + getString(R.string.qwt) + ": " + quantity;
+        priceMessage += "\n" + getString(R.string.receiptAmount) + price;
+        priceMessage += "\n" + getString(R.string.thank);
         return priceMessage;
     }
 
@@ -85,10 +95,10 @@ public class MainActivity extends AppCompatActivity {
     /**
      * This method displays the given text on the screen.
      */
-    private void displayMessage(String message) {
-        TextView OrderSummaryTextView = (TextView) findViewById(R.id.order_summary_text_view);
-        OrderSummaryTextView.setText(message);
-    }
+//    private void displayMessage(String message) {
+//        TextView OrderSummaryTextView = (TextView) findViewById(R.id.order_summary_text_view);
+//        OrderSummaryTextView.setText(message);
+//    }
 
     /**
      * incrementing
@@ -96,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void increment(View view) {
         if (quantity == 100) {
-            Toast.makeText(this, "Quantity can't be more than 100");
+            Toast.makeText(this, getString(R.string.incrementLimit), Toast.LENGTH_SHORT).show();
             return;
         }
         quantity = quantity + 1;
@@ -109,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void decrement(View view) {
         if (quantity == 1) {
-            showToast("Quantity can't be less than 1");
+            Toast.makeText(this, getString(R.string.decrementLimit), Toast.LENGTH_SHORT).show();
             return;
         }
         quantity = quantity - 1;
